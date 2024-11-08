@@ -1,0 +1,118 @@
+#test-name {
+    text-align: center;
+}
+
+.allQuestions {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap:wrap;
+}
+
+#quiz {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.question-text-marker {
+    display: flex;
+}
+
+.marker.correct::before {
+    content: "✔"; /* Галочка */
+    color: green;
+    font-size: 24px;
+}
+
+/* Стиль для маркера крестика */
+.marker.wrong::before {
+    content: "✖"; /* Крестик */
+    color: red;
+    font-size: 24px;
+}
+
+.question-block {
+    margin-bottom: 10px;
+}
+
+/* Стиль для блока с ответом */
+.answer-block {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 10px 5px;
+    max-width: 20%;
+
+    transition: transform 2s ease, opacity 1s ease, border-color 1s ease, background-color 1s ease;
+    cursor: pointer;
+}
+
+.answer-block:hover {
+    border: 0px #007BFF;
+    margin: 11px 6px;
+    padding: 11px;
+    box-shadow:0 0 0 3px #007BFF;
+    transition: box-shadow 0.3s;
+}
+
+.answer-block.selected {
+    transform: scale(1.05);
+}
+
+.answer-block.correct {
+    border-color: green;
+    background-color: #d4edda;
+}
+
+.answer-block.wrong {
+    border-color: red;
+    background-color: #f8d7da;
+}
+
+.answer-block.move-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#score, #end-message {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#question-btn {
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 1px;
+    border-radius: 3px;
+    color: black;
+    background-color: #8fcc9f;
+    cursor: pointer;
+}
+
+#question-btn.disabled {
+    background-color: white;
+    cursor: not-allowed;
+}
+
+/* Блок вывода правильного ответа */
+.explanation-block {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    font-style: italic;
+    display: none; /* Изначально скрыт */
+}
+
+.explanation-block.active {
+    display: block; /* Появляется при активации */
+}

@@ -1,0 +1,70 @@
+.info li {
+    margin: 0 0 5px 0;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    padding: 0 0 15px 10px;
+    max-width: 90%;
+}
+.info {
+    list-style-image: url('../images/marker.png');
+    line-height: 1.6;
+    /* Префиксы для старых версий браузеров */
+    -webkit-list-style-image: url('../images/marker.png'); /* Для Safari */
+    -moz-list-style-image: url('../images/marker.png'); /* Для Firefox */
+}
+.preview p {
+    line-height: 1.6;
+    color: black;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brief-info {
+    background-color: #D6D5C9; /* фон для контента */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    border-radius: 10px; /* Скругленные углы */
+    width: 80%; /* Ширина контейнера */
+    max-width: 800px; /* Максимальная ширина */
+    /* Префиксы для box-shadow и border-radius */
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Для старых версий Safari */
+    -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Для старых версий Firefox */
+    -webkit-border-radius: 10px; /* Для старых версий Safari */
+    -moz-border-radius: 10px; /* Для старых версий Firefox */
+}
+
+.pet-start{
+    background-color: #D6D5C9;
+    padding: 20px; /* Внутренние отступы */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    border-radius: 10px; /* Скругленные углы */
+    width: 80%; /* Ширина контейнера */
+    max-width: 800px; /* Максимальная ширина */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.rounded {
+    width: 200px; /* Ширина картинки */
+    height: 200px; /* Высота картинки */
+    border-radius: 50%; /* Закругление до круга */
+    object-fit: cover; /* Обрезка изображения для ровного заполнения */
+    /* Префиксы для border-radius и object-fit */
+    -webkit-border-radius: 50%; /* Для старых версий Safari */
+    -moz-border-radius: 50%; /* Для старых версий Firefox */
+    -webkit-object-fit: cover; /* Для старых версий Safari */
+}
+
+@media all and (max-width: 600px) {
+    .pet-start {
+        display: flex;
+        flex-direction: column;
+    }
+}

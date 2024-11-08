@@ -1,0 +1,179 @@
+body {
+    font-family: Ubuntu, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #B9BAA3;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.navigation {
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box; /* для поддержки разных браузеров */
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.navigation::before {
+    content: '';
+    background-image: url('../images/taxi-icon1.png');
+    background-repeat: repeat-x;
+    background-size: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Прозрачность изображения */
+    height: 100px;
+
+    background-position: bottom ;
+}
+
+.navigation li {
+    background: #333;
+    position: relative;
+}
+
+.other {
+    z-index: 2;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #f4f4f4;
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+.navigation a:hover {
+    background-color: #525151;
+}
+
+/* Подчеркивание для активного пункта меню */
+.navigation .active > a::after{
+    content: ''; /* Псевдоэлемент для подчеркивания */
+    position: absolute; /* Позиционируем его относительно родителя */
+    left: 0; /* Начало от левого края */
+    right: 0; /* Конец на правом краю */
+    bottom: 0px; /* Расположение под текстом */
+    height: 5px; /* Высота линии подчеркивания */
+    background-color: #525151; /* Цвет подчеркивания */
+    border-radius: 2px; /* Сглаженные углы */
+}
+
+/* Подменю */
+.dropdown-content {
+    display: none; /* По умолчанию скрыто */
+    position: absolute;
+    top: 100%; /* Расположено ниже родительского пункта меню */
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Можно настроить по ширине */
+    border-radius: 3px; /* Сглаживаем углы */
+    border: none; /* Убираем границы */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    z-index: 3;
+}
+
+.dropdown-content li {
+    border-top: none;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-align: left;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Показывается при наведении */
+}
+
+/* Для маленьких экранов */
+@media all and (max-width: 600px) {
+    .navigation {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+    /* Новые стили для подменю */
+    .dropdown-content {
+        width: 100%; /* Устанавливаем ширину подменю на 100% */
+        left: 0; /* Располагаем подменю слева */
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none; /* Убираем трансформацию */
+    }
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+footer {
+    background-color: #333; /* Цвет фона подвала */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Отступы внутри подвала */
+    position: relative; /* Позиционирование */
+    bottom: 0; /* Прикрепляем подвал к низу */
+    width: 100%; /* Ширина подвала */
+}
+
+.btn-toTop {
+    position: fixed;
+    background-color: #FF6978;
+    background-image: url("../images/arrow.png");
+    background-repeat: no-repeat;
+    right: 15px;
+    bottom: 0;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    z-index: 4;
+}
+
+.btn-toTop_hidden {
+    display: none;
+}

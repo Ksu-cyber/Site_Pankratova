@@ -1,0 +1,241 @@
+ /*Рисунок с использованием CSS */
+.content {
+    display: flex;
+    position: relative;
+}
+.background {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to top , #b8d6e6, #2892c7);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Плод яблока */
+.apple {
+    position: absolute;
+    top:  120px;
+    left: 165px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #e3224c, #ebabb9, #e8ccd2);
+}
+
+/* Ножка яблока */
+.stem {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top:  -3px;
+    left: 13px;
+    rotate: 250deg;
+    border-right: 15px solid #42eb58;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+}
+
+.legi {
+    width: 12px;
+    height: 24px;
+    background-color: #288033;
+}
+
+.leg_1 {
+    position: absolute;
+    top:  135px;
+    left: 30px;
+}
+.leg_1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 5px;
+    background-color: #b8d6e6;/* Цвет фона, который "вырежет" полукруг */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.leg_2 {
+    position: absolute;
+    top:  135px;
+    left: 44px;
+}
+
+.leg_2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 5px;
+    background-color: #b8d6e6;/* Цвет фона, который "вырежет" полукруг */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.leg_3 {
+    position: absolute;
+    top:  135px;
+    left: 95px;
+}
+
+.leg_3::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 5px;
+    background-color: #b8d6e6;/* Цвет фона, который "вырежет" полукруг */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.leg_4 {
+    position: absolute;
+    top:  135px;
+    left: 109px;
+}
+
+.leg_4::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 5px;
+    background-color: #b8d6e6;/* Цвет фона, который "вырежет" полукруг */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+/* Тело черепахи */
+.half-ellipse {
+    border-radius: 50% / 100% 100% 0 0;
+    background: linear-gradient(to bottom right , #1d592f, #79ed9c);
+    position: relative;
+    top: 70px;
+    left: 20px;
+    width: 100px;
+    height: 60px;
+    border-top: 3px solid #1d592f;
+    border-right: 4px solid #1d592f;
+    border-left: 4px solid #1d592f;
+    border-bottom: 5px solid #1d592f;
+}
+
+/* Голова */
+.oval_head {
+    position: absolute;
+    top: 105px;
+    left: 110px;
+    rotate: -20deg;
+    background: linear-gradient(to bottom left , #1d592f, #79ed9c);
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Глаз */
+.eyei {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    background-color: #050401;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+/* Улыбка */
+.smile {
+    position: absolute;
+    top: 10px;
+    left: 29px;
+    width: 13px;
+    height: 13px;
+    rotate: 9deg;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: transparent transparent #050401 transparent;
+}
+
+/* Полоски на теле черепахи */
+.stripe {
+    width: 81px;
+    height: 2px;
+    /* Цвет полоски */
+}
+
+.stripe_1 {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top:  3px;
+    left: -2px;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: transparent transparent #1d592f transparent;
+}
+
+.stripe_vertical {
+    width: 30px;
+    height: 73px;
+}
+
+.stripe_2 {
+    position: absolute;
+    top:  -7px;
+    left: 25px;
+    rotate: 10deg;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color:  transparent transparent transparent #1d592f;
+}
+
+.stripe_3 {
+    position: absolute;
+    top: -7px;
+    left: 41px;
+    rotate: -10deg;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: transparent #1d592f transparent transparent;
+}
+
+/* Хвост черепахи */
+.taili {
+    width: 0;
+    height: 0;
+    position: relative;
+    top:  56px;
+    left: 6px;
+    border-right: 15px solid #1d592f;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+}
+
+/* Земля */
+.striped-rectangle {
+    width: 200px;
+    height: 41px;
+    position: relative;
+    top:  77px;
+    left: 0px;
+    background: repeating-linear-gradient(
+            87deg,  /* Угол наклона полос */
+            #f5d64c,  /* Жёлтый цвет */
+            #f5d64c 10px,  /* Жёлтая полоса 10px */
+            #bf9f54 10px,  /* Коричневая полоса начинается на 10px */
+            #bf9f54 20px  /* Коричневая полоса 10px, общая ширина полосы - 20px */
+    );
+}

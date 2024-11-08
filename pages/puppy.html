@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбор щенка</title>
+  <link rel="stylesheet" href="../css/logo.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pup.css">
+</head>
+<body>
+  <header>
+    <!-- Логотип -->
+    <div class="logo">
+      <div class="dachshund-container">
+        <div class="dachshund">
+          <!-- Тело -->
+          <div class="dachshund-body">
+            <!-- Лапы -->
+            <div class="leg leg-front"></div>
+            <div class="leg leg-back"></div>
+            <!-- Голова -->
+            <div class="dachshund-head">
+              <div class="ear ear-right"></div>
+              <div class="ear ear-left"></div>
+              <div class="eye eye-left"></div>
+              <div class="eye eye-right"></div>
+              <div class="nose"></div>
+            </div>
+
+          </div>
+          <!-- Хвост -->
+          <div class="tail"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Меню навигации -->
+    <ul class="navigation">
+      <li><a href="../index.html">Главная страница</a></li>
+      <li><a href="../pages/features.html">Характеристика породы</a></li>
+      <li class="active"><a href="../pages/puppy.html">Выбор щенка</a></li>
+      <li class="dropdown">
+        <a href="#">Домашние задания</a>
+        <ul class="dropdown-content">
+          <li><a href="../pages/drawing.html">Рисунок CSS</a></li>
+          <li><a href="../pages/animation.html">Анимация SVG</a></li>
+          <li><a href="../pages/test.html">Тест на знание сленга</a></li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+
+  <div class="content">
+
+
+  </div>
+  <!-- Контент страницы -->
+  <div class="main-content">
+
+    <div class="generator">
+      <h2>Генератор кличек для таксёныша</h2>
+      <div class="name-display" id="nameDisplay">Нажмите "Сгенерировать"</div>
+      <button onclick="generateName()">Сгенерировать кличку</button>
+    </div>
+    <div class="choice-advice">
+      <h2>Как выбрать щенка</h2>
+      <p>
+        Если вы решили завести таксу, то приступать к выбору щенка нужно еще до его появления на свет.
+      </p>
+      <p>
+        Прежде всего, стоит определиться, рабочую или декоративную собаку вы хотите иметь. От этого зависит,
+        куда вам следует отправиться – на выставку или в поле, чтобы оценить качества родителей вашего будущего любимца.
+      </p>
+      <p>
+        Полезно будет также навести справки и о заводчике, особенно если вы покупаете малыша не в питомнике,
+        а у частного лица.
+      </p>
+      <div class="img-right">
+        <img src="../images/doggi.jpeg" class="doggi">
+      </div>
+
+      <p>
+        При самостоятельном выборе обратите внимание на <strong>следующие моменты:</strong>
+      </p>
+      <ul class="info">
+        <li>
+          У щенка не должно быть прибылых пальцев – их удаляют в первые дни жизни малыша.
+        </li>
+        <li>
+          Хвост маленькой таксы на ощупь ровный и достаточно подвижный без малейших признаков любого вида деформации.
+        </li>
+        <li>
+          У четырехнедельного щенка уже можно оценить правильность прикуса.
+        </li>
+        <li>
+          Наличие пупочной или паховой грыжи нетрудно определить визуально.
+        </li>
+        <li>
+          Присмотритесь, как двигается щенок. Опора при ходьбе должна быть на подушечки лап. Любые отклонения в
+          походке, вялые задние ноги, переваливающийся зад могут являться признаками серьезных проблем с
+          опорно-двигательным аппаратом.
+        </li>
+      </ul>
+    </div>
+
+
+
+  </div>
+  <div class="btn-toTop btn-toTop_hidden"></div>
+  <footer>
+    <p>© 2024 Таксолэнд. Все права защищены.</p>
+  </footer>
+  <script src="../js/generateName.js"></script>
+  <script src="../js/toTop.js"></script>
+</body>
+</html>

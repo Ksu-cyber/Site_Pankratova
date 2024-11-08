@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация SVG</title>
+    <link rel="stylesheet" href="../css/logo.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animation.css">
+</head>
+<body>
+    <header>
+        <!-- Логотип -->
+        <div class="logo">
+            <div class="dachshund-container">
+                <div class="dachshund">
+                    <!-- Тело -->
+                    <div class="dachshund-body">
+                        <!-- Лапы -->
+                        <div class="leg leg-front"></div>
+                        <div class="leg leg-back"></div>
+                        <!-- Голова -->
+                        <div class="dachshund-head">
+                            <div class="ear ear-right"></div>
+                            <div class="ear ear-left"></div>
+                            <div class="eye eye-left"></div>
+                            <div class="eye eye-right"></div>
+                            <div class="nose"></div>
+                        </div>
+
+                    </div>
+                    <!-- Хвост -->
+                    <div class="tail"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Меню навигации -->
+        <ul class="navigation">
+            <li><a href="../index.html">Главная страница</a></li>
+            <li><a href="../pages/features.html">Характеристика породы</a></li>
+            <li><a href="../pages/puppy.html">Выбор щенка</a></li>
+            <li class="dropdown active">
+                <a href="#">Домашние задания</a>
+                <ul class="dropdown-content">
+                    <li><a href="../pages/drawing.html">Рисунок CSS</a></li>
+                    <li><a href="../pages/animation.html">Анимация SVG</a></li>
+                    <li><a href="../pages/test.html">Тест на знание сленга</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <label>
+    <input type="checkbox" id="toggle" class="toggle"/>
+    <div id="adContainerAnimation" class="adContainer-Animation">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+             width="200px" height="200px" viewBox="0 0 200.000000 200.000000"
+             preserveAspectRatio="xMidYMid meet">
+            <g id="letterP" transform="translate(80.000000,170.000000) scale(0.600000,0.600000)" stroke="#547a8a" stroke-width="2">
+                <path d="M20.3935 0H3.96239C3.89729 0 3.84087 0.0255851 3.78011 0.0341135H0.972152C0.433996 0.0341135 0
+                0.460532 0 0.989292V44.0448C0 44.5736 0.433996 45 0.972152 45H10.4767C11.0148 45 11.4488 44.5736 11.4488
+                44.0448V30.3653H20.3935C28.9996 30.3653 36 23.5554 36 15.1848C36.0043 6.81418 28.9996 0 20.3935 0ZM19.647
+                21.4148C19.4951 21.4276 19.3432 21.4403 19.187 21.4403H11.6137C11.592 21.4403 11.5747 21.4233 11.553
+                21.4148C11.5151 21.4096 11.4792 21.3949 11.4488 21.3721C11.4212 21.3497 11.3987 21.3218 11.383 21.2902C11.3673
+                21.2585 11.3586 21.224 11.3577 21.1888V9.17654C11.3577 9.09978 11.3967 9.04008 11.4488 8.99318C11.4749 8.96759
+                11.5096 8.96333 11.5443 8.9548C11.5703 8.94627 11.5834 8.92921 11.6094 8.92921H19.1826C19.3562 8.92921 19.5298
+                8.94201 19.6991 8.9548C22.8456 9.22344 25.328 11.9141 25.328 15.1848C25.3324 18.4725 22.8239 21.176 19.647
+                21.4148Z" fill="#40C0E7"/>
+
+                <!-- Анимация движения буквы по зигзагу при наведении -->
+                <animateMotion
+                        begin="adContainerAnimation.mouseover"
+                        restart="never"
+                        dur="5s"
+                        path="M0 0 L-80 -70 L-10 -166"
+                        fill="freeze"
+                />
+                <!-- Анимация увеличения в размерах -->
+                <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="scale"
+                        from="1 1"
+                        to="2.5 2.5"
+                        begin="adContainerAnimation.mouseover"
+                        restart="never"
+                        fill="freeze"
+                        dur="5s"
+                        additive="sum" />
+                <!-- Анимация круга по контуру буквы -->
+                <circle r="3" fill="#c389e0" opacity="0" stroke="none">
+                    <animateMotion
+                            id="motionAnim"
+                            dur="6s"
+                            begin="toggle.click"
+                            restart="whenNotActive"
+                            path="M20.3935 0 H0.972152 V44.0448 H11.4488 V30.3653 H20.3935 C28.9996 30.3653 36
+                            23.5554 36 15.1848 C36.0043 6.81418 28.9996 0 20.3935 0 Z"
+                    />
+                    <animate attributeName="opacity" from="0" to="1" begin="motionAnim.beginEvent" dur="0.01s" fill="freeze"/>
+                    <animate attributeName="opacity" from="1" to="0" begin="motionAnim.endEvent" dur="0.00001s" fill="freeze"/>
+                </circle>
+
+                <!-- Прыжки буквы -->
+                <animateTransform
+                        id="jumpAnimate"
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        from="0 0"
+                        to="-10 0"
+                        dur="0.001s"
+                        begin="motionAnim.endEvent"
+                        fill="freeze"
+                        additive="sum"
+                        repeatCount="1"/>
+                <animateTransform
+                        id="lastJump"
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        from="-10 0"
+                        to="-20 0"
+                        dur="0.001s"
+                        begin="jumpAnimate.endEvent + 0.5s"
+                        fill="freeze"
+                        additive="sum"
+                        repeatCount="1"/>
+
+                <!-- Исчезновение буквы -->
+                <animate attributeName="opacity" from="1" to="0" begin="lastJump.endEvent + 0.5s" dur="0.5s" fill="freeze" />
+            </g>
+
+            <g id="letterK" transform="translate(100.000000,170.000000)" stroke="#547a8a" stroke-width="1">
+                <path d="M21.6375 26.3525L13.23 12.9225L20.6625 1.71751C20.775 1.54501 20.7875 1.32501 20.6875 1.14251C20.6401
+          1.05315 20.5691 0.978442 20.4823 0.926453C20.3955 0.874464 20.2962 0.847167 20.195 0.847507H14.085C13.9
+          0.847507 13.7225 0.942507 13.62 1.09751L6.8725 11.27V1.41001C6.8725 1.10001 6.62 0.850007 6.3125
+          0.850007H0.837496C0.527496 0.850007 0.277496 1.10001 0.277496 1.41001V26.65C0.277496 26.96 0.527496
+          27.21 0.837496 27.21H6.3125C6.62 27.21 6.8725 26.96 6.8725 26.65V14.6375L14.5775 26.9475C14.68 27.11 14.86
+          27.21 15.0525 27.21H21.1625C21.365 27.21 21.555 27.1 21.6525 26.92C21.75 26.7425 21.745 26.525 21.6375
+          26.3525Z" fill="#40C0E7"/>
+
+                <!-- Анимация движения буквы по зигзагу при наведении -->
+                <animateMotion
+                        begin="adContainerAnimation.mouseover"
+                        restart="never"
+                        dur="5s"
+                        path= "M0 0 L60 -70 L-25 -100"
+                        fill="freeze"
+                />
+
+                <!-- Анимация увеличения в размерах -->
+                <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="scale"
+                        from="1 1"
+                        to="2.5 2.5"
+                        begin="adContainerAnimation.mouseover"
+                        restart="never"
+                        fill="freeze"
+                        dur="5s"
+                        additive="sum" />
+
+                <!-- Анимация круга по контуру буквы -->
+                <circle r="2" fill="#c389e0" opacity="0" stroke="none">
+                    <animateMotion
+                            id="motionAnim"
+                            dur="6s"
+                            begin="toggle.click"
+                            restart="whenNotActive"
+                            path="M21.6375 26.3525L13.23 12.9225L20.6625 1.71751C20.775 1.54501 20.7875 1.32501 20.6875 1.14251C20.6401
+                            1.05315 20.5691 0.978442 20.4823 0.926453C20.3955 0.874464 20.2962 0.847167 20.195 0.847507H14.085C13.9
+                            0.847507 13.7225 0.942507 13.62 1.09751L6.8725 11.27V1.41001C6.8725 1.10001 6.62 0.850007 6.3125
+                            0.850007H0.837496C0.527496 0.850007 0.277496 1.10001 0.277496 1.41001V26.65C0.277496 26.96 0.527496
+                            27.21 0.837496 27.21H6.3125C6.62 27.21 6.8725 26.96 6.8725 26.65V14.6375L14.5775 26.9475C14.68 27.11 14.86
+                            27.21 15.0525 27.21H21.1625C21.365 27.21 21.555 27.1 21.6525 26.92C21.75 26.7425 21.745 26.525 21.6375
+                            26.3525Z"
+                    />
+                    <animate attributeName="opacity" from="0" to="1" begin="motionAnim.beginEvent" dur="0.01s" fill="freeze"/>
+                    <animate attributeName="opacity" from="1" to="0" begin="motionAnim.endEvent" dur="0.00001s" fill="freeze"/>
+                </circle>
+
+                <!-- Прыжки буквы -->
+                <animateTransform
+                        id="jumpAnimate"
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        from="0 0"
+                        to="10 0"
+                        dur="0.001s"
+                        begin="motionAnim.endEvent"
+                        fill="freeze"
+                        additive="sum"
+                        repeatCount="1"/>
+
+                <animateTransform
+                        id="lastJump"
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        from="10 0"
+                        to="15 0"
+                        dur="0.001s"
+                        begin="jumpAnimate.endEvent + 0.5s"
+                        fill="freeze"
+                        additive="sum"
+                        repeatCount="1"/>
+
+                <!-- Исчезновение буквы -->
+                <animate attributeName="opacity" from="1" to="0" begin="lastJump.endEvent + 0.5s" dur="0.5s" fill="freeze" />
+            </g>
+        </svg>
+
+        <div class="pic-container">
+            <img class="pic" src="../images/agatha.jpeg"/>
+            <div class="pic-text">
+                Kseniia Pankratova
+            </div>
+        </div>
+  </div>
+</label>
+
+  <footer style="position: fixed">
+      <p>© 2024 Таксолэнд. Все права защищены.</p>
+  </footer>
+</body>
+</html>

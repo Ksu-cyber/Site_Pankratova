@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test of slang</title>
+    <link rel="stylesheet" href="../css/logo.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/test.css">
+</head>
+<body>
+    <header>
+        <!-- Логотип -->
+        <div class="logo">
+            <div class="dachshund-container">
+                <div class="dachshund">
+                    <!-- Тело -->
+                    <div class="dachshund-body">
+                        <!-- Лапы -->
+                        <div class="leg leg-front"></div>
+                        <div class="leg leg-back"></div>
+                        <!-- Голова -->
+                        <div class="dachshund-head">
+                            <div class="ear ear-right"></div>
+                            <div class="ear ear-left"></div>
+                            <div class="eye eye-left"></div>
+                            <div class="eye eye-right"></div>
+                            <div class="nose"></div>
+                        </div>
+
+                    </div>
+                    <!-- Хвост -->
+                    <div class="tail"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Меню навигации -->
+        <ul class="navigation">
+            <li><a href="../index.html">Главная страница</a></li>
+            <li><a href="../pages/features.html">Характеристика породы</a></li>
+            <li><a href="../pages/puppy.html">Выбор щенка</a></li>
+            <li class="dropdown active" >
+                <a href="#">Домашние задания</a>
+                <ul class="dropdown-content">
+                    <li><a href="../pages/drawing.html">Рисунок CSS</a></li>
+                    <li><a href="../pages/animation.html">Анимация SVG</a></li>
+                    <li><a href="../pages/test.html">Тест на знание сленга</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <div id="quiz">
+        <h1 id="test-name">Тест на сленг</h1>
+        <button id="question-btn">Вопрос</button>
+        <div id="end-message" class="hidden">Вопросы закончились!</div>
+        <div id="score" class="hidden"></div>
+        <div id="question-container"></div>
+    </div>
+    <script src="../js/startTest.js"></script>
+
+    <footer style="position: fixed">
+        <p>© 2024 Таксолэнд. Все права защищены.</p>
+    </footer>
+</body>
+</html>

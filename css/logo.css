@@ -1,0 +1,138 @@
+/* Размер таксы управляется здесь */
+:root {
+    --scale: 0.4; /* Измените это значение, чтобы увеличить или уменьшить таксу */
+    --translatex: -100%;
+    --heightLogo: 100px;
+
+}
+
+.logo {
+    display: flex;
+    overflow: hidden;
+    /*justify-content: center;*/
+    height: calc(var(--scale) * var(--heightLogo));
+    background-color: #B9BAA3;
+}
+
+/* Контейнер для масштабирования */
+.dachshund-container {
+    left: 100%;
+    position: relative;
+    transform: scale(var(--scale));
+    animation: run 20s linear infinite; /* Анимация движения */
+}
+
+
+@keyframes run {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 50%;
+        transform: scale(var(--scale));
+    }
+    100% {
+        left: -20%;
+        transform: scale(var(--scale)); /* Конечная позиция (выходит за левую границу контейнера) */
+    }
+}
+
+
+/* Тело таксы */
+.dachshund-body {
+    width: 200px;
+    height: 60px;
+    background-color: #6b4f31;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Голова таксы */
+.dachshund-head {
+    width: 60px;
+    height: 60px;
+    background-color: #6b4f31;
+    border-radius: 50%;
+    position: absolute;
+    left: -40px;
+    top: 0;
+}
+
+/* Уши таксы */
+.ear {
+    width: 30px;
+    height: 40px;
+    background-color: #5a3f27;
+    border-radius: 60%;
+    position: absolute;
+}
+.ear-left {
+    left: -10px;
+    top: 5px;
+    transform: rotate(20deg);
+    z-index: -1; /* Левое ухо позади головы */
+}
+.ear-right {
+    right: -10px;
+    top: 5px;
+    transform: rotate(-20deg);
+    z-index: 3; /* Правое ухо впереди головы */
+}
+
+/* Нос таксы */
+.nose {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    /*right: 10px;*/
+}
+
+/* Глаза таксы */
+.eye {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+}
+.eye-left {
+    left: 10px;
+}
+.eye-right {
+    left: 22px;
+}
+
+/* Лапы таксы */
+.leg {
+    width: 15px;
+    height: 40px;
+    background-color: #6b4f31;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -15px;
+}
+.leg-front {
+    left: 20px;
+}
+.leg-back {
+    right: 20px;
+}
+
+/* Хвост таксы */
+.tail {
+    width: 10px;
+    height: 50px;
+    background-color: #6b4f31;
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    transform: rotate(45deg);
+    transform-origin: top;
+}
