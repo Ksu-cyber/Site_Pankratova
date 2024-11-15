@@ -184,6 +184,7 @@ class WordSorter {
         clickedWordBox.textContent = value;
         clickedWordBox.style.margin = '4px 0';
         clickedWordBox.style.paddingRight = '5px';
+        clickedWordBox.style.wordBreak = 'break-all';
 
         this.clickedWordsContainer.append(clickedWordBox);
     }

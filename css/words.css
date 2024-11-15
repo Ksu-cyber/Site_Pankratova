@@ -74,8 +74,9 @@
 
 
 .word-box {
-    min-width: 80px; /* Фиксированная ширина */
-    min-height: 20px; /* Фиксированная высота */
+    min-width: 80px;
+    min-height: 20px;
+    max-width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
