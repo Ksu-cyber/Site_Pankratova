@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test of slang</title>
+    <title>Рисунок CSS</title>
     <link rel="stylesheet" href="../css/logo.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="../css/words.css">
 </head>
 <body>
     <header>
@@ -52,16 +52,32 @@
         </ul>
     </header>
 
-    <div id="quiz">
-        <h1 id="test-name">Тест на сленг</h1>
-        <button id="question-btn">Вопрос</button>
-        <div id="end-message" class="hidden">Вопросы закончились!</div>
-        <div id="score" class="hidden"></div>
-        <div id="question-container"></div>
-    </div>
-    <script src="../js/startTest.js"></script>
+    <!-- Контент страницы -->
+    <div class="all-content">
+        <div class="block content-container">
+            <div class="block" id="moveBlock">
 
-    <footer style="position: fixed">
+            </div>
+            <div class="blocks-container">
+                <div class="block" id="sortedWordsBlock">
+
+                </div>
+
+                <div class="block" id="showWordsBlock">
+                    <div class="input-words-container">
+                        <input type="text" id="inputWords" placeholder="Введите слова через дефис">
+                        <button id="parseButton">РАЗОБРАТЬ</button>
+                    </div>
+                    <div class="block" id="clickedWords">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/doWords.js"></script>
+<!--    <footer style="position: fixed">-->
+    <footer>
         <p>© 2024 Таксолэнд. Все права защищены.</p>
     </footer>
 </body>

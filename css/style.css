@@ -5,8 +5,6 @@ body {
     background-color: #B9BAA3;
 }
 body, html {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
@@ -70,7 +68,7 @@ body, html {
     position: absolute; /* Позиционируем его относительно родителя */
     left: 0; /* Начало от левого края */
     right: 0; /* Конец на правом краю */
-    bottom: 0px; /* Расположение под текстом */
+    bottom: 0; /* Расположение под текстом */
     height: 5px; /* Высота линии подчеркивания */
     background-color: #525151; /* Цвет подчеркивания */
     border-radius: 2px; /* Сглаженные углы */
@@ -91,7 +89,7 @@ body, html {
     border: none; /* Убираем границы */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
-    z-index: 3;
+    z-index: 7;
 }
 
 .dropdown-content li {
@@ -108,6 +106,7 @@ body, html {
 
 .dropdown:hover .dropdown-content {
     display: block; /* Показывается при наведении */
+
 }
 
 /* Для маленьких экранов */
@@ -129,7 +128,6 @@ body, html {
     .dropdown-content {
         width: 100%; /* Устанавливаем ширину подменю на 100% */
         left: 0; /* Располагаем подменю слева */
-        -webkit-transform: none;
         -ms-transform: none;
         transform: none; /* Убираем трансформацию */
     }

@@ -1,0 +1,90 @@
+.all-content{
+    display: flex;
+    justify-content: center;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    /*height: 600px;*/
+    min-height: 600px;
+    align-items: center;
+    position: center;
+}
+#moveBlock{
+    width: 95%;
+    height: 100px;
+}
+.block{
+    border: 4px solid #918279;
+    border-radius: 10px; /* Скругленные углы */
+    background-color: #D6D5C9;
+    padding: 10px;
+    margin: 5px;
+}
+
+.display-statistics-container {
+    display: flex;
+    width: 97%;
+}
+
+#clickedWords {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.blocks-container {
+    height: 80%;
+    width: 95%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#sortedWordsBlock {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#showWordsBlock {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-words-container {
+    display: flex;
+}
+
+#parseButton {
+    margin-left: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #957186;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#inputWords {
+    width: 70%;
+}
+
+
+.word-box {
+    min-width: 80px; /* Фиксированная ширина */
+    min-height: 20px; /* Фиксированная высота */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative; /* Относительное позиционирование по умолчанию */
+    font-size: 14px;
+    text-align: center;
+    word-break: break-all;
+}
+
