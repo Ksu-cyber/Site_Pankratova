@@ -5,7 +5,7 @@ const logoutButton = document.getElementById('user-menu__link-exit');
 //     logoutButton.disabled = false; // Делаем кнопку активной
 // } else {
 //     alert('Вы не авторизованы!');
-//     window.location.href = 'index_game.html'; // Возвращаем на страницу входа
+//     window.location.href = 'index.html'; // Возвращаем на страницу входа
 // }
 
 logoutButton.addEventListener('click', () => {
