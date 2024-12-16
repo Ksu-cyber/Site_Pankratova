@@ -137,7 +137,7 @@ function createAndAnimateMatryoshka() {
     // Создаем элемент img для матрешки
     const matryoshkaImage = document.createElement('img');
     const randomNum = Math.floor(Math.random() * matryoshkaColors.length);
-    matryoshkaImage.src = `../images/matryoshki/matryoshka_${randomNum}.png`;  // Путь к изображению
+    matryoshkaImage.src = `../../images/matryoshki/matryoshka_${randomNum}.png`;  // Путь к изображению
     matryoshkaImage.alt = 'Матрешка';
     matryoshkaImage.classList.add('matryoshka');  // Добавляем класс для анимации
     matryoshkaImage.draggable = true;
@@ -245,7 +245,7 @@ function endGame() {
 
     if (score === 0)
     {
-        alert('Ошибка в сборке! Перепройдите уровень.');
+        alert('Ошибка в сборке! Пройдите уровень заново.');
         setTimeout(() => {
             location.reload();
         }, 1000);

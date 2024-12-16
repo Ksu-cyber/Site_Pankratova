@@ -128,25 +128,13 @@ function handleDropInContainer(e) {
 }
 
 
-function handleDropInField1(e) {
-    e.preventDefault();
-
-    draggedMatryoshka.classList.add('is-dragging');
-    // Возвращаем позиционирование к относительному
-    draggedMatryoshka.style.position = "relative";
-    draggedMatryoshka.style.left = "0";
-    draggedMatryoshka.style.top = "0";
-    matryoshkaField.append(draggedMatryoshka);
-}
-
-
 function createAndAnimateMatryoshka() {
     matryoshkaContainer.innerHTML = "";
 
     // Создаем элемент img для матрешки
     const matryoshkaImage = document.createElement('img');
     const randomNum = Math.floor(Math.random() * matryoshkaColors.length);
-    matryoshkaImage.src = `../images/matryoshki/matryoshka_${randomNum}.png`;  // Путь к изображению
+    matryoshkaImage.src = `../../images/matryoshki/matryoshka_${randomNum}.png`;  // Путь к изображению
     matryoshkaImage.alt = 'Матрешка';
     matryoshkaImage.classList.add('matryoshka');  // Добавляем класс для анимации
     matryoshkaImage.draggable = true;
@@ -213,7 +201,7 @@ function calculateScore() {
     elements = matryoshkaField.querySelectorAll('.matryoshka')
     count = elements.length;
 
-    if (count > 1 && checkOrder() == true) {
+    if (count > 1 && checkOrder() === true) {
         points = (timeRemaining/ 6) + count * 3;
 
         if (timeRemaining === 0) {
@@ -243,7 +231,7 @@ function endGame() {
 
     if (score === 0)
     {
-        alert('Ошибка в сборке! Перепройдите уровень.');
+        alert('Ошибка в сборке! Пройдите уровень заново.');
         setTimeout(() => {
             location.reload();
         }, 1000);
