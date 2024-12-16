@@ -10,7 +10,9 @@ window.addEventListener('load', () => {
 closeInstructionDialogBtn.addEventListener('click', () => {
     instructionDialog.close();
     document.addEventListener('keydown', handleSpacebarPress);
-    document.addEventListener('keydown', handleKeyPress);
+    if (isGameStarted) {
+        document.addEventListener('keydown', handleKeyPress);
+    }
 });
 
 linkInstructionDialogBtn.addEventListener('click', () => {

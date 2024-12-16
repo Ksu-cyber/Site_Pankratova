@@ -192,7 +192,7 @@ function createAndAnimateMatryoshka() {
     });
 
     // Назначаем перетаскивание
-    matryoshkaImage.addEventListener("dragstart", function(e) {
+    matryoshkaImage.addEventListener("dragstart", function() {
         draggedMatryoshka = matryoshkaImage; // Сохраняем ссылку на перетаскиваемую матрешку
     });
 }
@@ -206,8 +206,8 @@ finishBtn.addEventListener('click', () => {
 
 // // Подсчет очков
 function calculateScore() {
-    let count = 0;
-    let elements = null;
+    let count;
+    let elements;
     let points = 0;
 
     elements = matryoshkaField.querySelectorAll('.matryoshka')
@@ -330,12 +330,6 @@ function checkOrder() {
     return true;
 }
 
-// // Вызываем функцию для проверки порядка после того, как элементы были перетащены или перемещены
-// matryoshkaField.addEventListener("drop", function (e) {
-//     handleDropInField(e);  // Обрабатываем перетаскивание
-//     checkOrder();  // Проверяем порядок по X и scale
-//     calculateScore();
-// });
 
 function handleSpacebarPress(event) {
     if (event.key === ' ' && !isGameStarted) {
