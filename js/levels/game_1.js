@@ -68,7 +68,7 @@ function startGame() {
 function generateQuestion() {
     neededMatryoshkaColor = Math.floor(Math.random() * matryoshkaColors.length);
 
-    gameInfo.innerHTML = `Соберите матрёшку по возрастанию из <span style="color: ${(matryoshkaColors[neededMatryoshkaColor]).color};">${(matryoshkaColors[neededMatryoshkaColor]).name}</span> матрёшек за 3 минуты!`;
+    gameInfo.innerHTML = `Соберите матрёшку по возрастанию из двух и более <span style="color: ${(matryoshkaColors[neededMatryoshkaColor]).color};">${(matryoshkaColors[neededMatryoshkaColor]).name}</span> матрёшек за 3 минуты!`;
 }
 
 
