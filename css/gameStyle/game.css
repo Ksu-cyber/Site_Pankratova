@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Squares Condensed Regular';
-    src: url('../fonts/tt-squares-condensed-8.ttf')  format('truetype');
+    src: url('../../fonts/tt-squares-condensed-8.ttf')  format('truetype');
     font-weight: 500;
     font-style: normal;
 }

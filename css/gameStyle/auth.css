@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'Squares Condensed Regular';
-    src: url('../fonts/tt-squares-condensed-8.ttf')  format('truetype');
+    src: url('../../fonts/tt-squares-condensed-8.ttf')  format('truetype');
     font-weight: 500; /* Если шрифт имеет особый вес */
     font-style: normal; /* Если это обычный стиль шрифта */
 }

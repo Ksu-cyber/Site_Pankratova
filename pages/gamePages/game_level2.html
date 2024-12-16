@@ -6,10 +6,10 @@
     <title>Game</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/game.css">
-    <link rel="stylesheet" href="../css/modals.css">
-    <link rel="stylesheet" href="../css/instructionDialog.css">
+    <link rel="stylesheet" href="../../css/gameStyle/main.css">
+    <link rel="stylesheet" href="../../css/gameStyle/game.css">
+    <link rel="stylesheet" href="../../css/gameStyle/modals.css">
+    <link rel="stylesheet" href="../../css/gameStyle/instructionDialog.css">
 </head>
 <body>
     <header class="game-header">
@@ -18,17 +18,17 @@
             <ul class="game-header__user-menu">
                 <li class="user-menu__item user-menu__item-instruction" style="cursor: pointer;">
                     <a id="user-menu__link-user-menu__item-instruction">
-                        <img src="../images/icon-instruction.png" class="exit" alt="exit">
+                        <img src="../../images/icon-instruction.png" class="exit" alt="exit">
                     </a>
                 </li>
                 <li class="user-menu__item user-menu__item-rate">
-                    <a id="user-menu__link-rate" href="../pages/rate.html">
-                        <img src="../images/icon-rate.png" class="rate" alt="rate">
+                    <a id="user-menu__link-rate" href="rate.html">
+                        <img src="../../images/icon-rate.png" class="rate" alt="rate">
                     </a>
                 </li>
                 <li class="user-menu__item user-menu__item-exit" style="cursor: pointer;">
                     <a id="user-menu__link-exit">
-                        <img src="../images/icon-exit.png" class="exit" alt="exit">
+                        <img src="../../images/icon-exit.png" class="exit" alt="exit">
                     </a>
                 </li>
             </ul>
@@ -54,7 +54,7 @@
     </dialog>
 
     <div id="game_field">
-        <h2 class="level_number">Уровень 1</h2>
+        <h2 class="level_number">Уровень 2</h2>
         <p id="gameInfo">Нажмите пробел, чтобы начать игру!</p>
         <div id="timer">00:00</div>
         <div id="current_score">Баллы: 0</div>
@@ -62,7 +62,7 @@
         <button id="finishBtn" style="display: none;">Завершить сбор</button>
         <div id="matryoshkaContainer"></div>
 
-        <!-- Окно для выхода из игры -->
+        <!--         Окно для выхода из игры -->
         <div id="exitModal" style="display: none;">
             <div class="modal-background"></div>
             <div class="modal-content">
@@ -83,9 +83,9 @@
         </div>
     </div>
 
-    <script src="../js/levels/game_1.js"></script>
-    <script src="../js/logout.js"></script>
-    <script src="../js/exit.js"></script>
-    <script src="../js/showInstruction.js"></script>
+    <script src="../../js/levels/game_2.js"></script>
+    <script src="../../js/gameLogic/logout.js"></script>
+    <script src="../../js/gameLogic/exit.js"></script>
+    <script src="../../js/gameLogic/showInstruction.js"></script>
 </body>
 </html>
